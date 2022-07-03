@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<script>
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+</script>
+</head> 
+
+<body>
+<a href="index.html"><img src="Logo.png" alt="Fortress Of Valour" height=50px /></a>
+
+<a href="index.html"><img src="Home.png" alt="Home" height="30px" /></a>
+
+<a href="About.html"><img src="About.png" alt="About" height=30px /></a>
+
+<a href="Test/Contact Us.html"><img src="Contact Us.png" alt="Contact Us" height=30px /></a>
+
+<p><button onclick="clickCounter()" type="button">Click me!</button></p>
+<div id="result"></div>
+<p>Click the button to see the counter increase.</p>
+<p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
+
+</body>
+</html>

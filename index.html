@@ -1,35 +1,43 @@
 <!doctype html>
 <html>
 <head>
-<script>
-function clickCounter() {
-  if (typeof(Storage) !== "undefined") {
-    if (localStorage.clickcount) {
-      localStorage.clickcount = Number(localStorage.clickcount)+1;
-    } else {
-      localStorage.clickcount = 1;
-    }
-    document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
-  } else {
-    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
-  }
+<style>
+.headerdiv {
+text-align:left;
+vertical-align:center;
 }
-</script>
+</style>
 </head> 
 
 <body>
-<a href="index.html"><img src="Logo.png" alt="Fortress Of Valour" height=50px /></a>
+<header>
+<div class="headerdiv">
+<img src="PNG/Whole Logo Cut Left.png" alt="Logo"/>
+</div>
 
-<a href="index.html"><img src="Home.png" alt="Home" height="30px" /></a>
 
-<a href="About.html"><img src="About.png" alt="About" height=30px /></a>
+<hr/><br/>
+<nav>
 
-<a href="Test/Contact Us.html"><img src="Contact Us.png" alt="Contact Us" height=30px /></a>
 
-<p><button onclick="clickCounter()" type="button">Click me!</button></p>
-<div id="result"></div>
-<p>Click the button to see the counter increase.</p>
-<p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
+
+<a href="index.html"><img src="PNG/Home.png" alt="Home" height="30px" /></a>
+
+<a href="About.html"><img src="PNG/About.png" alt="About" height=30px /></a>
+
+<a href="Contact Us.html"><img src="PNG/Contact Us.png" alt="Contact Us" height=30px /></a>
+</nav>
+</header>
+<main>
+<h2>Pokemon Red Episode 1</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZUdbctFaiCg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+
+<h2>Pokemon Red Episode 2</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9XEmPqI-aRE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</main>
+<footer></footer>
+
 
 </body>
 </html>
